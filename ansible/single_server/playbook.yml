@@ -1,0 +1,13 @@
+---
+- hosts: all
+  sudo: true
+  tasks:
+    - name: update apt cache
+      apt: update_cache=yes
+    - name: install vim
+      apt: name=vim state=present
+    - name: install mc 
+      apt: name=mc state=present
+    - name: install screen
+      apt: name=screen state=present
+
